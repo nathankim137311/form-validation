@@ -1,0 +1,105 @@
+@import "variables";
+@import "globals";
+
+.container {
+    position: absolute; 
+    top: 15%;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    background-color: white;
+    height: 650px;
+    width: 450px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    h2 {
+        background-color: $blurple;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        margin: 0px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+}
+
+.form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    height: 110px;
+    label {
+        font-size: 1.1rem;
+        color: $darkgrey;
+    }
+    input {
+        margin-top: 10px;
+        height: 40px;
+        font-size: 1rem;
+        border: 2px solid #f0f0f0;
+        border-radius: 3px;
+        padding: 5px;
+    }
+    span {
+        display: none;
+        position: absolute;
+	    top: 50px;
+	    right: 15px;
+    }
+    small {
+        display: none;
+        color: $red;
+    }
+}
+
+.form-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 20px;
+    width: 100%;
+    input {
+        width: 100%;
+        height: 40px;
+        font-size: 1rem;
+        background-color: $green;
+        color: white;
+        border: none;
+        border-radius: 3px;
+    }
+    input:hover {
+        background-color: rgb(70, 219, 90);
+        cursor: pointer;
+    }
+}
+
+// After success or error
+
+.form.success input {
+    display: block;
+    border: 2px $green solid;
+}
+
+.form.error input {
+    display: block;
+    border: 2px $red solid;
+}
+
+.form.success .material-icons-outlined.success {
+    display: block;
+    color: $green;
+}
+
+.form.error .material-icons-outlined.error {
+    display: block;
+    color: $red;
+}
